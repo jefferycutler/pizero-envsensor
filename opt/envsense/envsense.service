@@ -1,0 +1,16 @@
+[Unit]
+Description=Environmental Sensor
+Documentation=https://github.com/jefferycutler
+Requires=network.target
+
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/envsense
+ExecStart=/opt/envsense/envsensor.sh  
+Restart=always
+User=envsense
+Group=envsense
+
+[Install]
+WantedBy=multi-user.target
